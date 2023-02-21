@@ -27,14 +27,14 @@ bool Lista::Agrega(GatoDomestico dato)
     }
 }
 
-void Lista::Buscar(int elemento)
+void Lista::Buscar(std::string elemento)
 {
     if(!Vacia()){
         int i=0;
         char band='F';
 
         while(i<ultimo+1 && band=='F'){
-            if(datos[i].getDato()==elemento){
+            if(datos[i].getRaza()==elemento){
                 band='T';
             }
             i++;
@@ -112,7 +112,10 @@ void Lista::Imprimir()
     if(!Vacia()){
         std::cout<<"\n\tImprimiendo todos los elementos de la lista: "<<std::endl<<std::endl;
         for(int i=0;i<=ultimo;i++){
-            std::cout<<"["<<datos[i].getDato()<<"]"<<"->";
+            std::cout<<"["<<datos[i].getAnio()<<", ";
+            std::cout<<datos[i].getDieta()<<", ";
+            std::cout<<datos[i].getLugarNac()<<", ";
+            std::cout<<datos[i].getRaza()<<"]"<<"->";
         }
         std::cout<<"\n";
     }else{
