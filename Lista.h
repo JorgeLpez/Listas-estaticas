@@ -14,11 +14,10 @@ class Lista
         bool Vacia();
         bool Llena();
         bool Agrega(GatoDomestico);
-        void Buscar(int);
+        void Buscar(std::string);
         bool Insertar(GatoDomestico,int);
         void Imprimir();
         void Eliminar(int pos);
-
 };
 
 #endif // LISTA_H
