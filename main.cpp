@@ -6,7 +6,8 @@ using namespace std;
 
 int main()
 {
-    int opc,dato,pos,elem;
+    int opc,anio,pos,elem;
+    string dieta,lugarnac,raza;
     GatoDomestico Mycat;
     Lista Mylist;
 
@@ -19,15 +20,24 @@ int main()
         cout<<"  4. Inserta."<<endl;
         cout<<"  5. Muestra."<<endl;
         cout<<"  6. Salir."<<endl<<endl;
-        cout<<"\tElige una opcion: ";
+        cout<<"Elige una opcion: ";
         cin>>opc;
 
         switch (opc){
 
             case 1: system("cls");
-                    cout<<"\n\tIngresa el dato que deseas insertar: ";
-                    cin>>dato;
-                    Mycat.setDato(dato);
+                    cout<<"\n\tIngresa el anio de nacimiento del gato domestico: ";
+                    cin>>anio;
+                    Mycat.setAnio(anio);
+                    cout<<"\n\tIngresa la dieta del gato domestico: ";
+                    cin>>dieta;
+                    Mycat.setDieta(dieta);
+                    cout<<"\n\tIngresa el lugar de nacimiento del gato domestico: ";
+                    cin>>lugarnac;
+                    Mycat.setLugarNac(lugarnac);
+                    cout<<"\n\tIngresa la raza del gato domestico: ";
+                    cin>>raza;
+                    Mycat.setRaza(raza);
                     if(Mylist.Agrega(Mycat)==true){
                         cout<<"\nDato agregado exitosamente!"<<endl<<endl;
                     }
@@ -35,23 +45,32 @@ int main()
                     break;
 
             case 2: system("cls");
-                    cout<<"\n\tIngresa el elemento que deseas buscar: ";
-                    cin>>elem;
-                    Mylist.Buscar(elem);
+                    cout<<"\n\tIngresa la raza del gato que deseas buscar: ";
+                    cin>>raza;
+                    Mylist.Buscar(raza);
                     system("pause");
                     break;
 
             case 3: system("cls");
-                    cout<<"\n\tIngresa la posicion del elemento que deseas eliminar: ";
+                    cout<<"\n\tIngresa la posicion del gato que deseas eliminar: ";
                     cin>>pos;
                     Mylist.Eliminar(pos);
                     system("pause");
                     break;
 
             case 4: system("cls");
-                    cout<<"\n\tIngresa el dato que deseas insertar: ";
-                    cin>>dato;
-                    Mycat.setDato(dato);
+                    cout<<"\n\tIngresa el anio de nacimiento del gato domestico: ";
+                    cin>>anio;
+                    Mycat.setAnio(anio);
+                    cout<<"\n\tIngresa la dieta del gato domestico: ";
+                    cin>>dieta;
+                    Mycat.setDieta(dieta);
+                    cout<<"\n\tIngresa el lugar de nacimiento del gato domestico: ";
+                    cin>>lugarnac;
+                    Mycat.setLugarNac(lugarnac);
+                    cout<<"\n\tIngresa la raza del gato domestico: ";
+                    cin>>raza;
+                    Mycat.setRaza(raza);
                     cout<<"\n\tIngresa la posicion en la que deseas insertar: ";
                     cin>>pos;
                     if(Mylist.Insertar(Mycat,pos)==true){
@@ -64,9 +83,6 @@ int main()
                     Mylist.Imprimir();
                     system("pause");
                     break;
-
-
         }
     }while(opc!=6);
-
 }
